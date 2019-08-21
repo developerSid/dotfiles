@@ -1,2 +1,4 @@
 [core]
-	pager = less -F -X
+   pager = less -F -X
+[pager]   
+   branch = false
