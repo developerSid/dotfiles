@@ -40,6 +40,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+alias j=jump
+
 export JAVA_HOME=$HOME/.sdkman/candidates/java/current
 export EDITOR=vim
 export PATH=$HOME/bin:$HOME/.local/bin:$JAVA_HOME/bin:$PATH
