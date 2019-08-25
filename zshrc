@@ -79,7 +79,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export EDITOR=vim
-export PATH=$PATH:$HOME/bin
+export CARGO_BIN=$HOME/.cargo/bin
+export PATH=$PATH:$HOME/bin:$CARGO_BIN
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
