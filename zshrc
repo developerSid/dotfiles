@@ -35,6 +35,7 @@ plugins=(
     gradle
     docker
     jump
+    sudo
 )
 
 source $ZSH/oh-my-zsh.sh
