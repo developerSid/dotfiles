@@ -43,6 +43,7 @@ alias j=jump
 export JAVA_HOME=$HOME/.sdkman/candidates/java/current
 export EDITOR=vim
 export PATH=$HOME/bin:$HOME/.local/bin:$JAVA_HOME/bin:$PATH
+
 [[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
 
 export SDKMAN_DIR="$HOME/.sdkman"
