@@ -40,17 +40,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 alias j=jump
 
-export JAVA_HOME=$HOME/.sdkman/candidates/java/current
 export EDITOR=vim
-export PATH=$HOME/bin:$HOME/.local/bin:$JAVA_HOME/bin:$PATH
 
 [[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
