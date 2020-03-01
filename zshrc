@@ -36,14 +36,14 @@ plugins=(
     sudo
 )
 
+[[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 alias j=jump
 
 export EDITOR=vim
-
-[[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -52,4 +52,3 @@ else
 fi
 
 eval "$(direnv hook zsh)"
-
