@@ -45,10 +45,17 @@ alias j=jump
 
 export EDITOR=vim
 
+[[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
+
+export PATH=$HOME/.local/bin:$PATH
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='vim'
 fi
 
-eval "$(direnv hook zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/garym/.sdkman"
+[[ -s "/home/garym/.sdkman/bin/sdkman-init.sh" ]] && source "/home/garym/.sdkman/bin/sdkman-init.sh"
