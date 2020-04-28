@@ -55,7 +55,3 @@ else
   export EDITOR='vim'
 fi
 
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/garym/.sdkman"
-[[ -s "/home/garym/.sdkman/bin/sdkman-init.sh" ]] && source "/home/garym/.sdkman/bin/sdkman-init.sh"
