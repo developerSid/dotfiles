@@ -1,9 +1,13 @@
 [core]
    pager = less -F -X
+   autocrlf = false
+   fileMode = false
+   eol = lf
 [pager]   
    branch = false
    tag = false
 [pull]
 	rebase = true
 [push]
-	default = current
+   default = current
+
