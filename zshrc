@@ -49,6 +49,11 @@ export EDITOR=vim
 
 export PATH=$HOME/.local/bin:$PATH
 
+if [ -d "$HOME/bin" ]; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
