@@ -55,3 +55,8 @@ else
   export EDITOR='vim'
 fi
 
+# fire up a terminal multiplexer 
+if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ zellij ]] && [ -z "$ZELLIJ" ] && [[ "$TERM" =~ alacritty ]]; then
+  exec zellij
+fi
+
