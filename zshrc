@@ -43,19 +43,20 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 alias j=jump
 
-export EDITOR=vim
-
 [[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
 
 export PATH=$HOME/.local/bin:$PATH
+
+if [ -d "$HOME/.cargo/bin" ]; then
+  PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 if [ -d "$HOME/bin" ]; then
   PATH="$HOME/bin:$PATH"
 fi
 
-
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+if command -v nvim &> /dev/null && [[ ! -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
 else
   export EDITOR='vim'
 fi
