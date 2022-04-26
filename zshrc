@@ -62,7 +62,7 @@ else
 fi
 
 # fire up a terminal multiplexer 
-if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ zellij ]] && [ -z "$ZELLIJ" ] && [[ "$TERM" =~ alacritty ]]; then
+if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ zellij ]] && [ -z "$ZELLIJ" ] && [ -z "$SSH_CONNECTION" ] && [[ "$TERM" =~ alacritty ]]; then
   exec zellij
 fi
 
