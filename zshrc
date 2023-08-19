@@ -62,6 +62,10 @@ else
   export EDITOR='vim'
 fi
 
+if command -v direnv &> /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
 # fire up a terminal multiplexer 
 if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ zellij ]] && [ -z "$ZELLIJ" ] && [ -z "$SSH_CONNECTION" ] && [[ "$TERM" =~ alacritty ]]; then
   exec zellij
