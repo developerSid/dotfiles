@@ -81,3 +81,7 @@ if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] 
   exec zellij
 fi
 
+if flatpak list | grep -q "org.getzola.zola"; then
+    alias zola="flatpak run org.getzola.zola"
+fi
+
