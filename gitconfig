@@ -7,9 +7,8 @@
    branch = false
    tag = false
 [pull]
-	rebase = true
+   rebase = true
 [push]
    default = current
-
 [init]
-	defaultBranch = master
+   defaultBranch = main

@@ -62,10 +62,10 @@ else
   export EDITOR='vim'
 fi
 
-if command -v exa &> /dev/null; then
-  alias ls=exa
-  alias ll='exa -lh'
-  alias la='exa -lah'
+if command -v lsd &> /dev/null; then
+  alias ls=lsd
+  alias ll='lsd -lh'
+  alias la='lsd -lah'
 fi
 
 if command -v bat &> /dev/null; then
