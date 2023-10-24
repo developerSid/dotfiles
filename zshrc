@@ -72,6 +72,10 @@ if command -v bat &> /dev/null; then
   alias cat=bat
 fi
 
+if command -v batcat &> /dev/null; then
+  alias cat=batcat
+fi
+
 if command -v direnv &> /dev/null; then
   eval "$(direnv hook zsh)"
 fi
@@ -81,7 +85,11 @@ if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] 
   exec zellij
 fi
 
-if flatpak list | grep -q "org.getzola.zola"; then
+if command -v flatpak &> /dev/null; then
+  if flatpak list | grep -q "org.getzola.zola"; then
     alias zola="flatpak run org.getzola.zola"
+  fi
 fi
 
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
