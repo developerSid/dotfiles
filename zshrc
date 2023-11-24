@@ -80,16 +80,9 @@ if command -v direnv &> /dev/null; then
   eval "$(direnv hook zsh)"
 fi
 
-# fire up a terminal multiplexer 
-if command -v zellij &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ zellij ]] && [ -z "$ZELLIJ" ] && [ -z "$SSH_CONNECTION" ] && [[ "$TERM" =~ alacritty ]]; then
-  exec zellij
-fi
-
 if command -v flatpak &> /dev/null; then
   if flatpak list | grep -q "org.getzola.zola"; then
     alias zola="flatpak run org.getzola.zola"
   fi
 fi
 
-# add Pulumi to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
