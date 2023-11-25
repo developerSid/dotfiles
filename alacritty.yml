@@ -5,7 +5,7 @@ window:
   title: Alacritty
 
 shell:
-  program: /usr/bin/zsh
+  program: zsh
   args:
   - -l
   - -c
