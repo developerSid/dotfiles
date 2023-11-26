@@ -39,8 +39,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-[[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
-
 export PATH=$HOME/.local/bin:$PATH
 
 alias j=jump
@@ -83,4 +81,6 @@ if command -v flatpak &> /dev/null; then
     alias zola="flatpak run org.getzola.zola"
   fi
 fi
+
+[[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
 
