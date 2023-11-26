@@ -36,16 +36,14 @@ plugins=(
     sudo
 )
 
-[[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-alias j=jump
-
 [[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
 
 export PATH=$HOME/.local/bin:$PATH
+
+alias j=jump
 
 if [ -d "$HOME/.cargo/bin" ]; then
   PATH="$HOME/.cargo/bin:$PATH"
