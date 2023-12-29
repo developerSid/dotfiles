@@ -9,7 +9,7 @@ shell:
   args:
   - -l
   - -c
-  - zellij attach --index 0 || zellij
+  - zellij || $HOME/.local/bin/zellij
 
 cursor:
   style: Beam
