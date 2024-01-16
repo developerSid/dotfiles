@@ -7,3 +7,7 @@ ln -sf ~/.dotfiles/zshrc .zshrc
 ln -sf ~/.dotfiles/gitconfig .gitconfig
 ln -sf ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf ~/.dotfiles/zellij.kdl ~/.config/zellij/config.kdl
+
+if [ -d "$HOME/.sdkman/etc/" ]; then
+   ln -sf ~/.dotfiles/sdkmanconfig ~/.sdkman/etc/config
+fi
