@@ -38,6 +38,7 @@ plugins=(
     docker
     jump
     sudo
+    asdf
 )
 
 source $ZSH/oh-my-zsh.sh
