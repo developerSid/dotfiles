@@ -87,6 +87,11 @@ if command -v flatpak &> /dev/null; then
   fi
 fi
 
+# Start ssh-agent if not already running
+if [ -z "$SSH_AGENT_PID" ]; then
+  eval $(ssh-agent -s) > /dev/null
+fi
+
 [[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
 
 
