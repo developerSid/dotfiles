@@ -67,6 +67,7 @@ if command -v lsd &> /dev/null; then
   alias ls=lsd
   alias ll='lsd -lh'
   alias la='lsd -lah'
+  alias tree='lsd --tree'
 fi
 
 if command -v bat &> /dev/null; then
