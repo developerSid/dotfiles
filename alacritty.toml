@@ -55,7 +55,7 @@ foreground = "0xabb2bf"
 [cursor]
 style = "Beam"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "zellij || $HOME/.local/bin/zellij"]
 program = "zsh"
 
