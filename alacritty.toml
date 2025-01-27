@@ -57,7 +57,7 @@ style = "Beam"
 
 [terminal.shell]
 program = "zsh"
-args = ["-l", "-c", "zellij || $HOME/.local/bin/zellij"]
+args = ["--login", "-c", "zellij || $HOME/.local/bin/zellij"]
 
 [window]
 title = "Alacritty"
