@@ -15,6 +15,7 @@
 [alias]
    lol = log --graph --decorate --pretty=oneline --abbrev-commit
    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	pu = !git pull $(git remote) $(git branch --show-current)
 [color]
    branch = auto
    diff = auto
