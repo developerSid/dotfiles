@@ -1,23 +1,46 @@
 [core]
-   pager = less -F -X
-   autocrlf = false
-   fileMode = false
-   eol = lf
+	pager = less -F -X
+	autocrlf = false
+	fileMode = false
+	eol = lf
 [pager]   
-   branch = false
-   tag = false
+	branch = false
+	tag = false
 [pull]
-   rebase = true
+	rebase = true
 [push]
-   default = current
+	default = simple
+	autoSetupRemote = true
+	followTags = true
 [init]
-   defaultBranch = main
+	defaultBranch = main
 [alias]
-   lol = log --graph --decorate --pretty=oneline --abbrev-commit
-   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	pu = !git pull $(git remote) $(git branch --show-current)
 [color]
-   branch = auto
-   diff = auto
-   interactive = auto
-   status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+[merge]
+	conflictstyle = zdiff3
