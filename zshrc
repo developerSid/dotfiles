@@ -41,6 +41,8 @@ plugins=(
     asdf
 )
 
+[[ -s "$HOME/.omzLocalPlugins" ]] && source "$HOME/.omzLocalPlugins"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
