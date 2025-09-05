@@ -1,0 +1,20 @@
+packages:
+  darwin:
+    brews:
+      - bat
+      - direnv
+      - fd
+      - fnm
+      - fzf
+      - gh # Github cli
+      - jq
+      - lazydocker
+      - lsd
+      - neovim
+      - rsync
+      - yq
+      - xz
+      - zellij
+    casks:
+      - alacritty
+      - font-jetbrains-mono-nerd-font
