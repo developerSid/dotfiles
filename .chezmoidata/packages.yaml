@@ -15,6 +15,7 @@ packages:
       - yq
       - xz
       - zellij
+      - codex
     casks:
       - alacritty
       - font-jetbrains-mono-nerd-font
