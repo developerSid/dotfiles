@@ -142,12 +142,6 @@ return {
 				},
 			},
 
-			ocamllsp = {
-				setup = {
-					root_dir = require("lspconfig").util.root_pattern("dune-project", "dune-workspace", ".git"),
-				},
-			},
-
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},
@@ -163,6 +157,15 @@ return {
 				},
 			},
 		}
+
+		-- Only add ocamllsp if it's available on the system
+		if vim.fn.executable("ocamllsp") == 1 then
+			servers.ocamllsp = {
+				setup = {
+					root_dir = require("lspconfig").util.root_pattern("dune-project", "dune-workspace", ".git"),
+				},
+			}
+		end
 
 		-- Ensure the servers and tools above are installed
 		--  To check the current status of installed tools and/or manually install
