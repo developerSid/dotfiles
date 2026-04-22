@@ -6,16 +6,13 @@ packages:
       - fd
       - fnm
       - fzf
-      - gh # Github cli
       - jq
-      - lazydocker
       - lsd
       - neovim
       - rsync
       - yq
       - xz
       - zellij
-      - codex
     casks:
       - alacritty
       - font-jetbrains-mono-nerd-font
