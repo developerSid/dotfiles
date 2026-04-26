@@ -88,10 +88,8 @@ if command -v direnv &> /dev/null; then
   eval "$(direnv hook zsh)"
 fi
 
-if command -v flatpak &> /dev/null; then
-  if flatpak list | grep -q "org.getzola.zola"; then
-    alias zola="flatpak run org.getzola.zola"
-  fi
+if command -v fnm &> /dev/null; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
 [[ -s "$HOME/.localConfig" ]] && source "$HOME/.localConfig"
