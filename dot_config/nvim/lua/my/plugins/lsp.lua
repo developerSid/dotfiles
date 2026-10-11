@@ -158,6 +158,15 @@ return {
 			},
 		}
 
+		-- The Gleam language server is bundled with the Gleam compiler rather than
+		-- installed through Mason. Only enable it when the compiler is available.
+		if vim.fn.executable("gleam") == 1 then
+			vim.lsp.config("gleam", {
+				capabilities = capabilities,
+			})
+			vim.lsp.enable("gleam")
+		end
+
 		-- Only add ocamllsp if it's available on the system
 		if vim.fn.executable("ocamllsp") == 1 then
 			servers.ocamllsp = {

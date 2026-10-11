@@ -6,6 +6,14 @@ return {
 		require("nvim-treesitter").setup({
 			-- your options here (may need adjustment for the new API)
 		})
+		if vim.fn.executable("gleam") == 1 then
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "gleam",
+				callback = function()
+					pcall(vim.treesitter.start)
+				end,
+			})
+		end
 
 		-- Neovim 0.12.4 ships a Lua parser whose fields match its runtime query.
 		-- The external Lua parser currently does not, so prevent it from

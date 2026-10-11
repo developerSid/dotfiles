@@ -1,3 +1,28 @@
+local formatters_by_ft = {
+  lua = { 'stylua' },
+}
+
+local formatters = {}
+
+if vim.fn.executable('prettier') == 1 then
+  formatters_by_ft.markdown = { 'prettier' }
+  formatters.prettier = {
+    inherit = 'prettier',
+    args = function(_, ctx)
+      return {
+        '--print-width=120',
+        '--prose-wrap=always',
+        '--stdin-filepath',
+        ctx.filename,
+      }
+    end,
+  }
+end
+
+if vim.fn.executable('gleam') == 1 then
+  formatters_by_ft.gleam = { 'gleam' }
+end
+
 return { -- Autoformat
   'stevearc/conform.nvim',
   event = { 'BufWritePre' },
@@ -30,13 +55,12 @@ return { -- Autoformat
         lsp_format = lsp_format_opt,
       }
     end,
-    formatters_by_ft = {
-      lua = { 'stylua' },
+    formatters_by_ft = formatters_by_ft,
+    formatters = formatters,
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
-    },
   },
 }
