@@ -1,0 +1,22 @@
+# Font (same as Alacritty)
+font-family = JetBrainsMonoNL Nerd Font
+font-size = 13
+
+# Colors: Ghostty's built-in One Dark (matches the Alacritty palette)
+theme = Atom One Dark
+
+# Cursor / window
+cursor-style = bar
+macos-titlebar-style = transparent
+window-width = 150
+window-height = 50
+window-save-state = never
+
+# Start zellij on launch (same as Alacritty's terminal.shell)
+command = /bin/zsh --login -c "zellij || $HOME/.local/bin/zellij"
+
+# Shift+Enter sends ESC+CR (same as Alacritty's binding)
+keybind = shift+enter=text:\x1b\r
+
+# Use Option as Alt
+macos-option-as-alt = true
